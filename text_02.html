@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+    <title>字体颜色CSS动效</title>
+    <style>
+        .colorful {
+            -webkit-mask-image: linear-gradient(to right, red, orange, yellow, green, cyan, blue, purple);
+            background-image: linear-gradient(to right, red, orange, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+            /*background-image: linear-gradient(to right, red, orange, yellow, green, yellow, orange, red);*/
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-size: 200% 100%;
+            animation: bgp 5s infinite linear;
+        }
+         a:visited {
+            color: #527ED1;
+        }
+        .colorful a {
+            color: #E16132;
+            margin-right: 5px;
+            text-decoration: none;
+            padding: 3px 0;
+        }
+        @-webkit-keyframes bgp {
+            0%  { background-position: 0 0;}
+            100% { background-position: -100% 0;}
+        }
+    </style>
+</head>
+<body>
+<p class="colorful ovh">
+    <a class="btn">签名版</a>
+    <a class="btn">京东自营</a>
+    <a class="btn">当当自营</a>
+    <a class="btn">亚马逊</a>
+    <a class="btn">异步社区</a>
+</p>
+
+</body>
+</html>
